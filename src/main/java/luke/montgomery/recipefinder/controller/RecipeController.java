@@ -42,10 +42,5 @@ public class RecipeController {
 		return repo.findByTitle(title);
 	}
 	
-	@GetMapping("/recipe/ingredients/{ingredients}")
-	public List<RecipeModel> getByIngredients(@PathVariable("ingredients") String ingredients) {
-		List<RecipeModel> temp = new ArrayList<>();
-		temp.addAll(repo.findByIngredients(ingredients));
-		return temp;
-	}
+	
 }
